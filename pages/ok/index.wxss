@@ -1,0 +1,12 @@
+/**index.wxss**/
+@import "/icon.wxss";
+@import "/base-rpx.wxss";
+page{
+  background-color: #fff;
+  text-align: center;
+}
+image{
+  margin:40rpx auto;
+  width: 80rpx;
+  height: 80rpx;
+}

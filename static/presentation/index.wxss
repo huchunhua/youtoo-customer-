@@ -1,0 +1,50 @@
+.presentation{
+    background-color: #fff;
+    border-radius: 10rpx;
+    margin:10rpx 10rpx;
+    padding:30rpx 20rpx;
+    display: flex;
+}
+.flex-sub{
+  flex:1;
+}
+.loge{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 90rpx;
+  margin-right: 30rpx;
+}
+.cf::after, .cf::before {
+  content: " ";
+  display: table;
+}
+.cf::after {
+  clear: both;
+}
+.fr {
+  float: right;
+}
+.text-red{
+    color:#ff6a6a;
+}
+.text-grey{
+    color:#959595;
+}
+.text-green{
+  color: #39b54a;
+}
+.text-yellow{
+  color:#FDC21E;
+}
+.margin{
+    margin-top: 30rpx;
+}
+.presentation{
+    font-size: 24rpx;
+}
+.name{
+    font-size: 30rpx;
+}
+.num{
+    margin-left:60rpx;
+}

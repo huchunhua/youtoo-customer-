@@ -1,0 +1,14 @@
+<view>
+	<view class="cont">
+	  <view wx:for="{{list}}" wx:key="index" class="list">
+	    <view bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" bindtap="withdrawcash" data-index="{{index}}" style="{{item.shows}}" class="list_del txt" data-bankname="{{item.bank_name}}" data-card="{{item.bank_card}}" data-logo="{{item.logo}}" data-id="{{item.id}}">
+	      <image class="list_img" src="{{item.logo}}"></image>
+	      <text class='list_name'>{{item.bank_name}}</text>
+	      <text class='list_datas'>{{item.bank_card}}</text>
+	    </view>
+	    <view data-index="{{index}}" bindtap="delItem" class="list_del del" data-id="{{item.id}}">删除</view>
+	  </view>
+	</view>
+    <view class="btn-sub btn-yellow margin-lr-sm margin-top-lg text-lg" bindtap="bindcard">新增银行</view>
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

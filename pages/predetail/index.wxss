@@ -1,0 +1,36 @@
+@import "/icon.wxss";
+@import "/base-rpx.wxss";
+Page {
+    background: #f4f4f4;
+    font-size: 32rpx;
+    color:#0e0e0e;
+}
+.border-top{
+	border-top: 1px solid #f4f4f4;
+}
+.bg-white{
+    background-color: #fff;
+}
+.radius{
+    border-radius: 10rpx;
+}
+.picker_group{
+	background-color: #f4f4f4;
+}
+.picker_group picker{
+	display: inline-block;
+}
+.screen{
+	margin-right: 10rpx;
+	width: 28rpx;
+	height: 28rpx
+}
+.pagetitle{
+	position: fixed;
+	top:0;
+	width: 100%;
+	z-index: 10
+}
+scroll-view{
+	margin-top:160rpx;
+}

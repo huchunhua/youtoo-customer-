@@ -1,0 +1,40 @@
+<view id="layout">
+    <view class="margin-top-sm margin-lr-sm padding-tb-sm padding-lr bg-white card-info radius">
+         <view class="padding-bottom-sm border-bottom cf">
+             开户银行
+             <view class="fr">
+                <picker bindchange="bindPickerChange" value="{{bank}}" range="{{bank}}" range-key="bank_name">
+                    <view class="picker" style='color:{{index==""?"#E2E2E2":black}}'>
+                        {{index==""?"请选择开户银行":bank[index].bank_name}}
+                        <image src="../../image/my_more.png" class="more-icon" wx:if="{{index == ''}}"></image>
+                    </view>
+                </picker>
+             </view>
+         </view>         
+         <view class="padding-bottom-sm border-bottom flex">
+             开户银行网点名称
+            <input value="{{bankname}}" placeholder='请输入银行网店名称' class="flex-sub" bindinput="bankname"></input>
+         </view>         
+         <view class="padding-bottom-sm border-bottom flex">
+             卡号
+            <input value="{{card}}" placeholder='请输入卡号' class="flex-sub" bindinput="card" maxlength="19" type="number"></input>
+         </view>         
+         <view class="padding-bottom-sm flex">
+             姓名
+            <input value="{{username}}" placeholder='请输入姓名' class="flex-sub" bindinput="username"></input>
+         </view>
+    </view>
+    <view class="margin-top-sm margin-lr-sm padding-tb-sm padding-lr bg-white card-info radius">
+        <view class="padding-bottom-sm border-bottom cf">
+            手机号
+            <span class="fr">{{mobile}}</span>
+        </view>  
+        <view class="padding-bottom-sm flex vericode">
+             验证码
+            <input value="{{code}}" placeholder='请输验证码' class="flex-sub" bindinput="code"></input>
+            <view class="btn btn-byellow" bindtap="sendmsg">发送</view>
+        </view>
+    </view>
+    <view class="btn-sub btn-yellow margin-lr-sm margin-top-lg text-lg" bindtap="addcard">提交</view>
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

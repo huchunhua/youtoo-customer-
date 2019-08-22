@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/login_/index",
+    
+    "pages/index/index",
+
+    "pages/verification/index",
+    "pages/finance/index",
+    "pages/paymentcode/index",
+    "pages/predetail/index",
+    "pages/bindcard/index",
+    "pages/cardlists/index",
+    "pages/withdrawcash/index",
+    "pages/ok/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color":"#909095",
+    "selectedColor":"#fdcd11",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./image/home.png",
+        "selectedIconPath":"./image/home_select.png"
+      },
+      {
+        "pagePath": "pages/finance/index",
+        "text": "财务",
+        "iconPath": "./image/finance.png",
+        "selectedIconPath":"./image/finance_select.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "presentation": "/static/presentation/index",
+    "useitem": "/static/useitem/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

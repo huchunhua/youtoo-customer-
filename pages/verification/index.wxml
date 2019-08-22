@@ -1,0 +1,41 @@
+<view id="">
+  <view class="cf padding">
+    <view class="fl type_wrap" bindtap="openType">
+      {{type}}
+      <image src="../../image/ic_arrow_up.png" wx:if="{{showType}}"></image>
+      <image src="../../image/ic_arrow_pull.png" wx:else></image>
+    </view>
+    <input placeholder="请输入名称" class="fr"  bindinput="name" />    
+  </view>
+  <view class="picker_group padding-tb padding-lr-sm cf">  
+      <picker mode="date" value="{{startdate}}"  end="{{enddate}}" bindchange="bindDateChange">  
+        <view class="picker">  
+          {{startdate}}  
+        </view>  
+      </picker>  
+      至  
+      <picker mode="date" value="{{enddate}}" start="{{startdate}}" end="2050-01-01" bindchange="bindDateChange2">  
+        <view class="picker">  
+          {{enddate}}  
+        </view>  
+      </picker>
+      <image src="../../image/ic_arrow_pull.png" class="icon-pull"></image>
+      <view class="fr" bindtap="screen">  
+        <!-- <image src="../../image/date.png" class="screen"></image>筛选  -->
+        核销金额：{{}}
+      </view>   
+  </view>  
+   <scroll-view
+    scroll-y
+    style="height: 1100rpx;"
+    bindscrolltolower="lower"
+  >
+    <useitem wx:for="{{lists}}" Info="{{item}}"></useitem>
+  </scroll-view>
+</view>
+<view id="typeModal" wx:if="{{showType}}">
+  <view class="model_content">
+    <view wx:for="{{selectArray}}" wx:for-index="index" wx:for-item="item" data-id='{{item.id}}' data-text='{{item.text}}' bindtap="changeType" class='{{typeid  == item.id ?"active":""}}'>{{item.text}}</view>   
+  </view>
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

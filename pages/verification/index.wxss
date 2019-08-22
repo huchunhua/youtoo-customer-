@@ -1,0 +1,73 @@
+@import "/icon.wxss";
+@import "/base-rpx.wxss";
+Page {
+	background-color: #fff;
+    font-size: 32rpx;
+    color:#0e0e0e;
+}
+.bg-white{
+    background-color: #fff;
+}
+.radius{
+    border-radius: 10rpx;
+}
+.picker_group{
+	height:50px;
+	background:rgba(250,250,250,1);
+}
+.picker_group picker{
+	display: inline-block;
+}
+input{
+	width: calc(100% - 260rpx);
+	height: 60rpx;
+	line-height: 60rpx;
+	background:rgba(0,0,0,0.05);
+	border-radius:15px;
+	padding:0 30rpx;
+	font-size: 28rpx;
+}
+.type_wrap{
+	height: 60rpx;
+	line-height: 60rpx;
+}
+.type_wrap image,.icon-pull{
+	width: 30rpx;
+	height: 30rpx;
+}
+#typeModal{
+    position: fixed;
+    left: 0;
+    top: 120rpx;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.7);
+    z-index: 9999;
+    text-align: center;
+    padding-top:10rpx;
+    padding-left: 30rpx;
+}
+.model_content{
+	width: 160rpx;
+	height: 306rpx;
+	background-image: url(https://youbao-1251769479.cos.ap-chengdu.myqcloud.com/youtu_sale/bg_combobox.png);
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding-top:15rpx;
+}
+.model_content view{
+	padding:0 20rpx;
+	height: 72rpx;
+	line-height: 72rpx;
+	border-bottom: 1px solid rgba(236,236,236,1);
+}
+.model_content view:first-child{
+	border-radius:4px 4px 0px 0px;
+}
+.model_content view:last-child{
+	border-bottom: none;
+}
+.model_content view.active{
+	background-color: #FDC21E;
+}

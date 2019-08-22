@@ -1,0 +1,35 @@
+<view id="layout">
+     <view class="margin-top-sm margin-lr-sm padding-tb-sm padding-lr bg-white radius">
+         <view class="padding-bottom-sm border-bottom">选择提现银行</view>
+         <view wx:if="{{bank == ''}}" class="cf padding-tb">
+            未绑定银行卡
+            <view class="fr text-grey" bindtap="bindcard">
+                去绑定
+                <image src="../../image/my_more.png" class="more-icon"></image>    
+            </view>
+         </view>
+         <view class="flex padding-tb text-lg bank-select card-info" wx:if="{{bank !== ''}}" bindtap="selectcard">
+            <view class="flex-sub">
+                <view class="name">
+                    <image src="{{bank.logo}}"></image>
+                    {{bank.bank_name}}
+                </view>
+                <view class="num margin-top-sm">{{bank.bank_card}}</view> 
+            </view>
+            <image src="../../image/my_more.png" class="more-icon bank-more"></image> 
+         </view>
+
+     </view>
+     <view class="margin-top-sm margin-lr-sm padding bg-white radius">
+         <view class="">提现金额</view>
+         <view class="border-bottom padding-tb-lg padding-left number flex">
+            ￥<input class="flex-sub" value="{{money}}" bindinput="money" type='digit'></input>             
+         </view>
+         <view class="padding-top">可提现余额<span class="margin-left-sm text-red">￥{{balance}}</span><span class="all btn-yellow fr" bindtap="all">全额</span></view>
+     </view>
+     <view class="btn btn-yellow margin-lr-sm text-lg" bindtap="withdrawal" data-cardid="{{bank.id}}">
+         提现
+     </view>
+     <view class="margin-top-sm text-red text-center text-sm">说明：{{instructions}}</view>
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

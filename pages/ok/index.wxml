@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view id='top'>
+    <view>
+        <view class="">
+        	<image src='/image/success.png' mode='widthFix'></image>
+        </view>
+        <text class="font-sm">提现申请成功，请在三个工作日后注意查收</text>
+    </view>
+</view>

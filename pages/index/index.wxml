@@ -1,0 +1,47 @@
+<view>
+<!--     <view class="text-xl padding-lr-sm padding-tb-lg text-bold text-left">{{datas.store_name}}</view> -->
+    <view>
+        <view class="name text-df">欢迎回来，{{account}}！</view>
+        <view class="content">
+            <view class="num padding-bottom text-red">{{datas.todayCount}}张</view>
+            <view class="">今日核销</view>
+            <view class="input-wrp padding-lr-sm flex">
+                <input type='code' placeholder='请扫描或输入卡券编码' class="flex-sub" value="{{code}}" bindinput='changecode'></input>
+                <view class="btn btn-yellow" bindtap="check">验核</view>
+            </view>
+            <view class="scancode btn-yellow text-lg" bindtap="onScanCode">扫描卡券编码</view>
+            <view class="scancode btn-orange text-lg" bindtap="paymentcode">收款码</view>            
+        </view>
+    </view>
+</view>
+<view id="codeinfoModal" wx:if="{{showCodeModel}}">
+    <view class="modal-container padding-sm">
+        <view class="store_name">大龙燚</view>
+        <view class="code_title">
+            <view class="code_name">{{codeinfo.couponName}}</view>
+            <view class="code_num text-sm padding-top-xs">{{codeinfo.couponCode}}</view>
+        </view>
+<!--         <view class="code_tips text-left">
+            使用说明 
+            <view>有效期：{{codeinfo.couponDetail}}</view>  
+            <view>使用时间：</view>   
+            <view>适用范围：</view>  
+            <view>使用规则：</view>   
+        </view> -->
+        <rich-text nodes="{{codeinfo.couponDetail}}"></rich-text>
+        <view class="btn-verify btn-yellow" bindtap="useCoupon" data-id="{{codeinfo.id}}">
+            确认核销
+        </view>
+    </view>
+    <image src="../../image/ic_popup_close.png" class="btn-close" bindtap="hideCodeModal"></image>      
+</view>
+<view id="tipsModal" wx:if="{{showTipsModel}}">
+    <view class="modal-container">
+        <image src="../../image/success.png" class="icon" wx:if="{{checksucces}}"></image>
+        <!-- <image src="../../image/pic_fail.png" class="icon"></image> -->
+        <view class="text-bold padding-top-lg text-xl" wx:if="{{checksucces}}">代金券核销成功</view>
+        <view class="text-bold padding-top-lg text-xl" wx:else>{{tips}}</view>
+    </view>
+    <image src="../../image/ic_popup_close.png" class="btn-close" bindtap="hideTipsModal"></image>     
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

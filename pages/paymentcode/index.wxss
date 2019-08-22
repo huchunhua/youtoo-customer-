@@ -1,0 +1,25 @@
+/**index.wxss**/
+@import "/icon.wxss";
+@import "/base-rpx.wxss";
+page{
+  background-color: #fff;
+  text-align: center;
+}
+.box{
+	width: 750rpx;
+	height: 670rpx;
+	background-image: url(https://youbao-1251769479.cos.ap-chengdu.myqcloud.com/youtu_sale/bg_shoukuan.png);
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.box .name{
+	height: 140rpx;
+	line-height: 140rpx;
+	font-size: 32rpx;
+}
+.tips{
+	margin-top:20rpx;
+	font-size: 24rpx;
+	color:#999999;
+}

@@ -1,0 +1,15 @@
+<view class="presentation">
+<!-- 	<image src="{{Info.seller_logo}}" class="loge"></image> -->
+	<view class="flex-sub">
+	    <view class="cf">
+	    	<span class="name">提现</span>
+	    	<view class="fr">-{{Info.seller_money}}</view>
+	    </view>     
+	    <view class="cf margin">
+	    	<span class=" text-grey">{{Info.create_time}}</span>
+	    	<view class="fr text-yellow" wx:if="{{Info.status == 0}}">提现中...</view>
+	    	<view class="fr text-green" wx:elif="{{Info.status == 1}}">返利</view>
+	    	<view class="fr text-red" wx:elif="{{Info.status == 2}}">提现失败</view>
+	    </view> 
+   	</view>
+</view>

@@ -1,0 +1,58 @@
+@import "/icon.wxss";
+@import "/base-rpx.wxss";
+Page {
+    background: #f4f4f4;
+    font-size: 32rpx;
+    color:#0e0e0e;
+}
+.bg-white{
+    background-color: #fff;
+}
+.radius{
+    border-radius: 10rpx;
+}
+.border-bottom{
+    border-bottom: 1px solid #f4f4f4;
+}
+.more-icon{
+    width: 10rpx;
+    height: 20rpx;
+}
+.card-info{
+    height: 150rpx;
+}
+.card-info .name>image{
+    height: 30rpx;
+    width: 30rpx;
+}
+.btn{
+    margin-top: 70rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    border-radius: 80rpx;
+}
+.number{
+    height: 180rpx;
+    font-size:72rpx;
+    line-height: 100rpx;
+}
+.number input{
+    height: 100rpx;
+}
+.bank-select{
+    position: relative;
+}
+.bank-more{
+    position: absolute;
+    right: 0;
+    top:85rpx;
+}
+.all{
+    margin-top: -5rpx;
+    height: 40rpx;
+    width: 100rpx;
+    line-height: 40rpx;
+    text-align: center;
+    border-radius: 40rpx;
+}

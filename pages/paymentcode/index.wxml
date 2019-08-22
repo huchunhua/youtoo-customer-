@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view id='top'>
+<view class="box">
+	<view class="name">{{storeName}}</view>
+  	<canvas canvas-id='qrcode' style='margin:40rpx auto 0;width:360rpx; height:360rpx; background:#AAA;'></canvas>
+  	<view class="tips">扫一扫，向我付款</view>
+</view>
+</view>

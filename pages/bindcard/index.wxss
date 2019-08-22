@@ -1,0 +1,44 @@
+@import "/icon.wxss";
+@import "/base-rpx.wxss";
+Page {
+    background: #f4f4f4;
+    font-size: 32rpx;
+    color:#0e0e0e;
+}
+.bg-white{
+    background-color: #fff;
+}
+.radius{
+    border-radius: 10rpx;
+}
+.border-bottom{
+    border-bottom: 1px solid #f4f4f4;
+}
+.more-icon{
+    width: 10rpx;
+    height: 20rpx;
+}
+.card-info>view,.card-info input{
+    height: 100rpx;
+    line-height: 100rpx;
+}
+.card-info input{
+ padding-left: 80rpx;
+}
+.vericode{
+    position: relative;
+}
+.vericode .btn{
+    margin-top: 15rpx;
+    width: 170rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    border-radius: 70rpx;
+    text-align: center;
+}
+.btn-sub{
+    height:80rpx;
+    line-height: 80rpx;
+    border-radius: 80rpx;
+    text-align: center;
+}

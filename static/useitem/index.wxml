@@ -1,0 +1,10 @@
+<view class="presentation">
+    <view class="cf">
+    	<span class="name">{{Info.title}}</span>
+    	<view class="fr text-red">+{{Info.couponAcount}}</view>
+    </view>     
+    <view class="cf margin">
+    	单价：{{Info.couponAcount}}<span class="num">数量：{{Info.couponNum}}</span>
+    	<view class="fr"><span class="text-grey">{{Info.couponUseTime}}</span></view>
+    </view> 
+</view>

@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<image src='/image/logo.png' mode='widthFix'></image>
+<view class="name text-grey">中油优途商户平台</view>
+<input type='text' placeholder='请输入手机号' bindinput="username" value="{{username}}"  type='number'></input>
+<input type='password' placeholder='请输入登录密码' bindinput="password" value="{{password}}"></input>
+<!-- <text class="fr text-yellow register padding-sm" bindtap="register">商家入驻</text> -->
+<button bindtap="login" class="btn-yellow">登 录</button>

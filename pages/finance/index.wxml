@@ -1,0 +1,53 @@
+<view id="layout">
+     <view class="total padding-tb bg-white">
+         <view class="padding-top-sm text-lg">今日核销</view>
+         <view class="padding-tb-sm today_check">{{datas.todayCheck}}</view>
+         <view class="padding-top-lg flex">
+             <view class="flex-sub border-right">
+                 <view class="text-sm padding-bottom-sm">累计核销</view>
+                 <view class="text-lg">{{datas.allCheck}}</view>
+             </view>             
+             <view class="flex-sub border-right">
+                 <view class="text-sm padding-bottom-sm">昨日核销</view>
+                 <view class="text-lg">{{datas.yesCheck}}</view>
+             </view>             
+             <view class="flex-sub">
+                 <view class="text-sm padding-bottom-sm">一周平均</view>
+                 <view class="text-lg">{{datas.weekCheck}}</view>
+             </view>
+         </view>
+     </view>
+     <view class="margin-top-xs bg-white cash_wrap">
+        <view class="cf padding-sm">
+            <image src="../../image/pic_wallet.png" class="fl"></image>
+            <view class="fl padding-left">
+              <view class="text-lg">余额</view>
+              <view class="text-xl text-yellow padding-tb-xs">{{datas.balance}}</view>
+            </view>
+            <view class="btn-yellow btn-cash text-lg fr" bindtap="withdrawCash">
+                 提现
+            </view>            
+        </view>
+        <view class="margin-top-xs padding-sm flex text-left text-lg bg-yellow  cashing">
+             <view class="flex-sub">已提现<text class="margin-left text-xl">{{datas.withdrawal}}</text></view>
+             <view bindtap="details">明细<image src="../../image/ic_arrow_r_brown.png" class="more-icon"></image></view>
+        </view>
+     </view>
+     <view class="padding-tb text-left text-lg">
+         <view class="cf bg-white padding-lr ver_title">
+             <span class="text-bold">核销记录</span>
+             <view class="fr text-df" bindtap="verification">查看更多<image src="../../image/my_more.png" class="more-icon margin-left-xs"></image></view>
+         </view>
+         <view class="write-item margin-top-xs margin-lr padding" wx:for="{{datas.verification}}">
+             <view class="cf margin-bottom">
+                 <span class="text-bold">{{item.po_name}}</span>
+                 <text class="fr text-sm text-grey">{{item.po_use_time}}</text>
+             </view>
+             <view class="cf text-sm">
+                 <!-- 单价：{{item.po_price / item.po_number}} <span>数量：{{item.po_number}}</span> -->
+                 <view class="fr">总价：<span class="text-red">{{item.po_price}}</span></view>
+             </view>
+         </view>
+     </view>
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

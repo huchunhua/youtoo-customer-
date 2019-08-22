@@ -1,0 +1,39 @@
+/**index.wxss**/
+@import "/icon.wxss";
+@import "/base-rpx.wxss";
+page{
+  background-color: white;
+  text-align: center;
+  font-size: 30rpx;
+}
+image{
+  width: 170rpx;
+  height: 170rpx;
+  margin:0 auto;
+}
+.name{
+  margin-bottom: 100rpx;
+}
+input{
+  margin:0 30rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #f4f4f4;
+  text-align: left;
+}
+button{
+  margin-top: 80rpx;
+  width: 680rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 80rpx;
+  background-color: #fdcd11;
+  font-size: 32rpx;
+}
+.register{
+  text-decoration: underline;
+}
+button:active{
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
